@@ -271,8 +271,20 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
 }
 .contact-row:last-child { border-bottom: none; }
 .contact-row:hover { padding-left: 8px; }
+.contact-row--icon { cursor: default; }
+.contact-row--icon:hover { padding-left: 0; }
 .contact-row .lbl { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .contact-row .val { font-size: 16px; font-weight: 500; }
+
+.linkedin-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: #0A66C2; color: #fff;
+  transition: transform .15s, background .2s;
+  flex-shrink: 0;
+}
+.linkedin-icon:hover { background: #004182; transform: scale(1.08); }
+.linkedin-icon svg { width: 20px; height: 20px; fill: currentColor; display: block; }
 @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; gap: 30px; } }
 
 /* ---------- FOOTER ---------- */
