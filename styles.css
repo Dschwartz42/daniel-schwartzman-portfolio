@@ -172,13 +172,10 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
   display: inline-flex; align-items: center; gap: 8px;
   padding: 8px 16px; border-radius: 8px;
   background: var(--ink); color: var(--bg);
-  font-size: 13px; font-weight: 500; text-decoration: none;
-  transition: background .2s, transform .15s;
+  font-size: 13px; font-weight: 500;
+  cursor: default; user-select: none;
 }
-.app-store-badge:hover { background: var(--accent); transform: translateY(-1px); }
 .app-store-badge svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
-
-.coming-soon-note { font-size: 12px; color: var(--muted); margin-top: 6px; }
 
 /* project visuals */
 .proj-visual {
@@ -202,6 +199,47 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
 
 .sessn-logo-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .sessn-logo { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+.v-sandbag-icon {
+  border-radius: 18px; aspect-ratio: 4/3; position: relative; overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 50px -28px rgba(40,30,20,0.35);
+  background: #1d3a26;
+  display: flex; align-items: center; justify-content: center;
+}
+.sandbag-icon-img { width: 140px; height: 140px; border-radius: 24px; object-fit: cover; box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+
+.chrono-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 42px; font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1A1A1A;
+  position: relative; z-index: 1;
+}
+
+.copy-link-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 22px; border-radius: 999px;
+  font-size: 14.5px; font-weight: 500;
+  color: var(--ink); border: 1px solid var(--line);
+  background: transparent; cursor: pointer;
+  transition: border-color .2s, transform .15s;
+  font-family: var(--sans);
+}
+.copy-link-btn:hover { border-color: var(--ink); transform: translateY(-2px); }
+.copy-link-btn svg { flex-shrink: 0; }
+
+.toast {
+  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--ink); color: var(--bg);
+  padding: 14px 24px; border-radius: 12px;
+  font-size: 14px; font-weight: 500; text-align: center;
+  max-width: 380px; width: calc(100% - 48px);
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s, transform .25s;
+  z-index: 100;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 @media (max-width: 760px) {
   .project, .project.flip { grid-template-columns: 1fr; gap: 26px; }
