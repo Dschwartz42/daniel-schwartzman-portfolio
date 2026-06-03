@@ -154,7 +154,6 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
   padding: 44px 0; border-bottom: 1px solid var(--line);
 }
-.project:has(.v-sandbag-logo) { align-items: start; }
 .project:last-child { border-bottom: none; }
 .project.flip .proj-visual { order: 2; }
 .proj-kicker { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-soft); font-weight: 600; margin-bottom: 12px; }
@@ -185,27 +184,21 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
   box-shadow: 0 24px 50px -28px rgba(40,30,20,0.35);
 }
 .v-sessn { background: linear-gradient(150deg, #0a0a0a 0%, #141414 60%, #1a1218 100%); }
-.v-sandbag { background: linear-gradient(150deg, #1d3a26 0%, #2e5c3c 100%); }
+.v-pantrypal { background: linear-gradient(150deg, #f0fdf4 0%, #dcfce7 60%, #bbf7d0 100%); }
 .v-chrono { background: linear-gradient(150deg, #f4efe4 0%, #e7dcc6 100%); }
 .mock-label { position: absolute; bottom: 14px; left: 16px; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
-.v-sessn .mock-label, .v-sandbag .mock-label { color: #fff; }
+.v-sessn .mock-label { color: #fff; }
 .v-chrono .mock-label { color: #4a4031; }
 .glyph { font-family: var(--serif); font-size: 64px; font-weight: 600; }
 .v-sessn .glyph { color: #fff; }
-.v-sandbag .glyph { color: #fff; }
 .v-chrono .glyph { color: #9A2A2A; }
 .mock-note { position: absolute; top: 14px; right: 16px; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; opacity: .55; }
 .v-chrono .mock-note { color: #4a4031; }
-.v-sessn .mock-note, .v-sandbag .mock-note { color: #fff; }
+.v-sessn .mock-note { color: #fff; }
 
 .sessn-card-svg { width: 100%; height: 100%; }
 
-.v-sandbag-logo {
-  border-radius: 18px; aspect-ratio: 1/1; position: relative; overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: 0 24px 50px -28px rgba(40,30,20,0.35);
-}
-.sandbag-logo-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pantrypal-logo-img { width: 72%; height: auto; object-fit: contain; position: relative; z-index: 1; }
 
 .chrono-title {
   font-family: 'Playfair Display', Georgia, serif;
@@ -214,30 +207,6 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
   color: #1A1A1A;
   position: relative; z-index: 1;
 }
-
-.copy-link-btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 22px; border-radius: 999px;
-  font-size: 14.5px; font-weight: 500;
-  color: var(--ink); border: 1px solid var(--line);
-  background: transparent; cursor: pointer;
-  transition: border-color .2s, transform .15s;
-  font-family: var(--sans);
-}
-.copy-link-btn:hover { border-color: var(--ink); transform: translateY(-2px); }
-.copy-link-btn svg { flex-shrink: 0; }
-
-.toast {
-  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
-  background: var(--ink); color: var(--bg);
-  padding: 14px 24px; border-radius: 12px;
-  font-size: 14px; font-weight: 500; text-align: center;
-  max-width: 380px; width: calc(100% - 48px);
-  opacity: 0; pointer-events: none;
-  transition: opacity .25s, transform .25s;
-  z-index: 100;
-}
-.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 @media (max-width: 760px) {
   .project, .project.flip { grid-template-columns: 1fr; gap: 26px; }
