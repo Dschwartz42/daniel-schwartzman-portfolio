@@ -184,7 +184,7 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
   border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;
   box-shadow: 0 24px 50px -28px rgba(40,30,20,0.35);
 }
-.v-sessn { background: linear-gradient(150deg, #1c1c1e 0%, #2a2a30 100%); }
+.v-sessn { background: linear-gradient(150deg, #0a0a0a 0%, #141414 60%, #1a1218 100%); }
 .v-sandbag { background: linear-gradient(150deg, #1d3a26 0%, #2e5c3c 100%); }
 .v-chrono { background: linear-gradient(150deg, #f4efe4 0%, #e7dcc6 100%); }
 .mock-label { position: absolute; bottom: 14px; left: 16px; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
@@ -198,8 +198,7 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
 .v-chrono .mock-note { color: #4a4031; }
 .v-sessn .mock-note, .v-sandbag .mock-note { color: #fff; }
 
-.sessn-logo-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.sessn-logo { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+.sessn-card-svg { width: 100%; height: 100%; }
 
 .v-sandbag-logo {
   border-radius: 18px; aspect-ratio: 1/1; position: relative; overflow: hidden;
