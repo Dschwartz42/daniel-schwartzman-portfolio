@@ -225,8 +225,7 @@ section { padding: 84px 0; border-top: 1px solid var(--line); }
 /* ---------- CONTACT ---------- */
 #contact { background: var(--bg-alt); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.contact-grid h2 { font-family: var(--serif); font-size: clamp(30px, 4.5vw, 46px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.05; }
-.contact-grid h2 em { font-style: italic; color: var(--accent); }
+.contact-grid h2 { font-family: var(--serif); font-size: clamp(30px, 4.5vw, 46px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.05; color: var(--ink); }
 .contact-sub { margin-top: 18px; color: var(--muted); max-width: 40ch; font-size: 17px; }
 .contact-list { display: flex; flex-direction: column; gap: 4px; }
 .contact-row {
